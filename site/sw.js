@@ -1,4 +1,4 @@
-const CACHE='flightlookup-shell-v1.8';
+const CACHE='flightlookup-shell-v1.9';
 const ROOT=new URL('./',self.location.href).href;
 const FILES=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES.map(f=>new Request(new URL(f,ROOT),{cache:'reload'})))).then(()=>self.skipWaiting())));
